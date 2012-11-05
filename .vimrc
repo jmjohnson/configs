@@ -37,7 +37,11 @@ nnoremap <C-S-Right> vw
 vnoremap <C-S-Right> w
 vnoremap <BS> x
 
-" Save/Quit/Copy/Paste
+" Delete current line
+inoremap <C-d> <C-o>dd
+nnoremap <C-d> dd
+
+" Save/Quit/Copy/Paste/Undo/Redo
 inoremap <C-s> <C-o>:w<CR>
 nnoremap <C-s> :w<CR>
 inoremap <C-q> <C-o>:q<CR>
@@ -46,6 +50,10 @@ vnoremap <C-c> "+y
 nnoremap <C-v> "+p 
 inoremap <C-v>  <C-o>"+p 
 vnoremap <C-x> "+x 
+inoremap <C-z> <C-o>u
+nnoremap <C-z> u
+inoremap <C-y> <C-o><C-r>
+nnoremap <C-y> <C-r>
 
 " Map window jumping keys
 nnoremap <c-k> <c-w>k
