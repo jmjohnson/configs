@@ -6,6 +6,9 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
+Bundle 'Townk/vim-autoclose'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
 
