@@ -9,6 +9,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on
 
@@ -16,10 +17,19 @@ filetype plugin indent on
 set number
 set softtabstop=2
 set tabstop=2
+set shiftwidth=2
+set expandtab
 set smartcase
 set incsearch
+set title
+set wildchar=<Tab> wildmenu wildmode=full
 set hlsearch
 set mouse=a
+set autoindent
+set smartindent
+set showmode
+set showmatch
+set autoread
 " set guifont=Liberation\ Mono\ 10
 
 nnoremap / /\v
@@ -40,6 +50,12 @@ vnoremap <BS> x
 " Delete current line
 inoremap <C-d> <C-o>dd
 nnoremap <C-d> dd
+
+" Use Alt, up/down to move a line of text
+inoremap <A-Up> <Esc>VdkPi
+inoremap <A-Down> <Esc>Vdpi
+nnoremap <A-Up> <Esc>VdkP
+nnoremap <A-Down> <Esc>Vdp
 
 " Save/Quit/Copy/Paste/Undo/Redo
 inoremap <C-s> <C-o>:w<CR>
