@@ -61,6 +61,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Summon CtrlP eclipse style
+map <C-t> <C-p>
+
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
