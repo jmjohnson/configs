@@ -44,10 +44,13 @@ nnoremap <C-v> "+p
 inoremap <C-v>  <C-o>"+p 
 vnoremap <C-x> "+x 
 
-nnoremap p gP
-
 " Map window jumping keys
 nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Delete trailing whitespace
+" removes trailing spaces of python files
+" (and restores cursor position)
+autocmd BufWritePre *.py mark z | %s/ *$//e | 'z
