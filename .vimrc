@@ -16,6 +16,7 @@ set tabstop=2
 set smartcase
 set incsearch
 set hlsearch
+set mouse=a
 " set guifont=Liberation\ Mono\ 10
 
 nnoremap / /\v
@@ -29,8 +30,15 @@ nnoremap <C-S-Right> vw
 vnoremap <C-S-Right> w
 vnoremap <BS> x
 
+" Save/Quit/Copy/Paste
 inoremap <C-s> <C-o>:w<CR>
 nnoremap <C-s> :w<CR>
+inoremap <C-q> <C-o>:q<CR>
+nnoremap <C-q> :q<CR>
+vnoremap <C-c> "+y
+nnoremap <C-v> "+p 
+inoremap <C-v>  <C-o>"+p 
+vnoremap <C-x> "+x 
 
 nnoremap p gP
 
