@@ -22,6 +22,10 @@ set mouse=a
 nnoremap / /\v
 nnoremap <Space> :nohlsearch<CR><Space>
 
+" Quick reloading of files
+autocmd BufEnter,BufWinEnter,CursorHold filename :checktime
+
+" Hilight text with control arrow keys
 inoremap <C-S-Left> <C-O>vb
 nnoremap <C-S-Left> vb
 vnoremap <C-S-Left> b
