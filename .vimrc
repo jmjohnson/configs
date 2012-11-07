@@ -30,10 +30,12 @@ set smartindent
 set showmode
 set showmatch
 set autoread
+set backupdir=~/.vim/backup/
+set directory=~/.vim/backup/
 " set guifont=Liberation\ Mono\ 10
 
 nnoremap / /\v
-nnoremap <Space> :nohlsearch<CR><Space>
+nnoremap <Silent> <Space> :nohlsearch<CR><Space>
 
 " Quick reloading of files
 autocmd BufEnter,BufWinEnter,CursorHold filename :checktime
