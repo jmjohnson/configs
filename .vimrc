@@ -32,6 +32,8 @@ set showmatch
 set autoread
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
+
+let mapleader = ","
 " set guifont=Liberation\ Mono\ 10
 
 nnoremap / /\v
