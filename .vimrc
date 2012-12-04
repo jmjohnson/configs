@@ -10,6 +10,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on
 
