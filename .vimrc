@@ -89,4 +89,4 @@ map <C-t> <C-p>
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
-autocmd BufWritePre *.py mark z | %s/ *$//e | 'z
+autocmd BufWritePre *.{py,js} mark z | %s/ *$//e | 'z
