@@ -10,7 +10,9 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Townk/vim-autoclose'
 Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/taglist.vim'
 
 filetype plugin indent on
 
@@ -83,10 +85,13 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Summon CtrlP eclipse style
-map <C-t> <C-p>
+" Python triple quotes
+inoremap """ """"""<C-O>2h
+
+" Cap Y yanks to EOL
+map Y y$
 
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
-autocmd BufWritePre *.{py,js} mark z | %s/ *$//e | 'z
+autocmd BufWritePre *.py mark z | %s/ *$//e | 'z
