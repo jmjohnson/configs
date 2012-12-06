@@ -90,6 +90,11 @@ inoremap """ """"""<C-O>2h
 " Cap Y yanks to EOL
 map Y y$
 
+" Quit with q, record with Q
+noremap Q q
+noremap q <Nop>
+noremap <silent> <leader>q :q<cr>
+
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
