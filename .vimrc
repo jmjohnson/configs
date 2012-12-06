@@ -56,7 +56,6 @@ vnoremap <C-S-Right> w
 vnoremap <BS> x
 
 " Delete current line
-inoremap <C-d> <C-o>dd
 nnoremap <C-d> dd
 
 " Use Alt, up/down to move a line of text
