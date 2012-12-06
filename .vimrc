@@ -84,9 +84,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Python triple quotes
-inoremap """ """"""<C-O>2h
-
 " Cap Y yanks to EOL
 map Y y$
 
