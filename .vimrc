@@ -13,6 +13,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Townk/vim-autoclose'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on
 
@@ -95,4 +96,7 @@ noremap <silent> <leader>q :q<cr>
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
-autocmd BufWritePre *.py mark z | %s/ *$//e | 'z
+autocmd BufWritePre *.{py,js,proto} mark z | %s/ *$//e | 'z
+
+" I only ever want to look in my buffers, usually
+let g:ctrlp_cmd = 'CtrlPBuffer'
