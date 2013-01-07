@@ -37,6 +37,7 @@ set showmatch
 set autoread
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
+set autochdir " IMPORTANT: Causes some plugins not to work
 
 let mapleader = ","
 " set guifont=Liberation\ Mono\ 10
@@ -96,7 +97,9 @@ noremap <silent> <leader>q :q<cr>
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
-autocmd BufWritePre *.{py,js,proto} mark z | %s/ *$//e | 'z
+autocmd BufWritePre *.{py,js,protao,hs} mark z | %s/ *$//e | 'z
+
+nnoremap <F5> :redr!<CR>
 
 " I only ever want to look in my buffers, usually
 let g:ctrlp_cmd = 'CtrlPBuffer'
