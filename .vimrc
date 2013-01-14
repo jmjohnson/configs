@@ -31,7 +31,6 @@ set wildchar=<Tab> wildmenu wildmode=full
 set hlsearch
 set mouse=a
 set autoindent
-set smartindent
 set showmode
 set showmatch
 set autoread
