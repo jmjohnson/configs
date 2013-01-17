@@ -42,7 +42,7 @@ let mapleader = ","
 " set guifont=Liberation\ Mono\ 10
 
 nnoremap / /\v
-nnoremap <Silent> <Space> :nohlsearch<CR><Space>
+nnoremap <silent> <Space> :nohl<CR><Space>
 
 " Quick reloading of files
 autocmd BufEnter,BufWinEnter,CursorHold filename :checktime
@@ -98,6 +98,7 @@ noremap <silent> <leader>q :q<cr>
 " (and restores cursor position)
 autocmd BufWritePre *.{py,js,protao,hs} mark z | %s/ *$//e | 'z
 
+" Redraw screen
 nnoremap <F5> :redr!<CR>
 
 " I only ever want to look in my buffers, usually
