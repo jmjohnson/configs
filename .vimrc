@@ -14,6 +14,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'duganchen/vim-soy'
 
 filetype plugin indent on
 
