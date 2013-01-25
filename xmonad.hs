@@ -2,9 +2,10 @@ import XMonad
 import XMonad.Config.Gnome (gnomeConfig)
 import XMonad.Util.CustomKeys (customKeys)
 
-main = xmonad $ gnomeConfig
-{-
-  keys = customKeys delKeys insKeys }
+main = xmonad $ gnomeConfig {
+  keys = customKeys delKeys insKeys,
+  logHook = return ()  -- TODO: Log something!
+  }
   where
     delKeys :: XConfig l -> [(KeyMask, KeySym)]
     delKeys XConfig { modMask = modMask } =
@@ -13,4 +14,3 @@ main = xmonad $ gnomeConfig
     insKeys :: XConfig l -> [((KeyMask, KeySym), X())]
     insKeys XConfig { modMask = modMask } =
       [ ((modMask, xK_p), spawn "dmenu_run") ]
--}
