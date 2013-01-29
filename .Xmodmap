@@ -3,6 +3,7 @@
 ! keycode 133 = Super_L NoSymbol Super_L
 ! keycode 64 = Alt_L NoSymbol Alt_L
 
+! Rotate left Ctrl/Super/Alt one clockwise. Makes Ctrl wayy easier to hit.
 remove mod1 = Alt_L
 remove mod4 = Super_L
 remove control = Control_L
