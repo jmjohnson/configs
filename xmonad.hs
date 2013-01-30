@@ -15,11 +15,14 @@ main = xmonad $ gnomeConfig {
     delKeys XConfig { modMask = modMask } =
       [ (modMask, xK_p), (modMask, xK_w), (modMask, xK_e) ]
 
-    dmenuBindings = [ ((modMask, xK_p), spawn "dmenu_run") ]
-    swapWorkspaceBindings =
+    dmenuBindings :: KeyMask -> [((KeyMask, KeySym), X())]
+    dmenuBindings modMask = [ ((modMask, xK_p), spawn "dmenu_run") ]
+
+    swapWorkspaceBindings :: KeyMask -> [((KeyMask, KeySym), X())]
+    swapWorkspaceBindings modMask =
       [((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
        | (key, sc) <- zip [xK_s, xK_d] [0..],
          (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
     insKeys :: XConfig l -> [((KeyMask, KeySym), X())]
-    insKeys XConfig { modMask = modMask } = dmenuBindings ++ swapWorkspaceBindings
+    insKeys XConfig { modMask = modMask } = dmenuBindings modMask ++ swapWorkspaceBindings modMask
