@@ -4,6 +4,20 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Snipmate and its numerous dependencies
+Bundle 'honza/snipmate-snippets'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+
+" Snipmate configs
+let g:snips_trigger_key='<c-space>'
+let g:snips_trigger_key_backwards='<s-c-space>'
+
+" YouCompleteMe
+let g:ycm_key_list_select_completion=['<Tab>']
+let g:ycm_key_list_previous_completion=['<S-Tab>']
+
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
@@ -15,6 +29,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'duganchen/vim-soy'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'rstacruz/sparkup'
 
 filetype plugin indent on
 
