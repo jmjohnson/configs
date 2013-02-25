@@ -20,7 +20,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'duganchen/vim-soy'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'rstacruz/sparkup'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Snipmate configs
 let g:snips_trigger_key='<c-space>'
