@@ -22,13 +22,17 @@ Bundle 'duganchen/vim-soy'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-" Snipmate configs
+" Snipmate
 let g:snips_trigger_key='<c-space>'
 let g:snips_trigger_key_backwards='<s-c-space>'
 
 " YouCompleteMe
 let g:ycm_key_list_select_completion=['<Tab>']
 let g:ycm_key_list_previous_completion=['<S-Tab>']
+
+" Sparkup TODO(jmagnusjohnson): allow sparkup to act on a configurable list of
+" filetypes
+inoremap <c-e> <c-o>V!sparkup<CR>
 
 filetype plugin indent on
 
@@ -89,10 +93,6 @@ vnoremap <C-c> "+y
 nnoremap <C-v> "+p 
 inoremap <C-v>  <C-o>"+p 
 vnoremap <C-x> "+x 
-inoremap <C-z> <C-o>u
-nnoremap <C-z> u
-inoremap <C-y> <C-o><C-r>
-nnoremap <C-y> <C-r>
 
 " Map window jumping keys
 nnoremap <c-k> <c-w>k
