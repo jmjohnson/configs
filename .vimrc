@@ -9,6 +9,7 @@ Bundle 'honza/snipmate-snippets'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
+
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
@@ -21,6 +22,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'duganchen/vim-soy'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mattn/zencoding-vim'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Snipmate
 let g:snips_trigger_key='<c-space>'
