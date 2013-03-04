@@ -5,10 +5,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Snipmate and its numerous dependencies
-Bundle 'honza/snipmate-snippets'
-Bundle 'tomtom/tlib_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
+"Bundle 'honza/snipmate-snippets'
+"Bundle 'tomtom/tlib_vim'
+"Bundle 'MarcWeber/vim-addon-mw-utils'
+"Bundle 'garbas/vim-snipmate'
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
@@ -108,12 +108,11 @@ map Y y$
 " Quit with q, record with Q
 noremap Q q
 noremap q <Nop>
-noremap <silent> <leader>q :q<cr>
 
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
-autocmd BufWritePre *.{py,js,protao,hs} mark z | %s/ *$//e | 'z
+autocmd BufWritePre *.{py,js,proto,hs} mark z | %s/ *$//e | 'z
 
 " Redraw screen
 nnoremap <F5> :redr!<CR>
