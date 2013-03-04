@@ -5,10 +5,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Snipmate and its numerous dependencies
-Bundle 'honza/snipmate-snippets'
-Bundle 'tomtom/tlib_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
+"Bundle 'honza/snipmate-snippets'
+"Bundle 'tomtom/tlib_vim'
+"Bundle 'MarcWeber/vim-addon-mw-utils'
+"Bundle 'garbas/vim-snipmate'
+
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
