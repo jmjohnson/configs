@@ -34,7 +34,7 @@ let g:ycm_key_list_select_completion=['<Tab>']
 let g:ycm_key_list_previous_completion=['<S-Tab>']
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger = '<CR>'
+let g:UltiSnipsExpandTrigger = '<c-CR>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsListSnippets = '<c-l>'
