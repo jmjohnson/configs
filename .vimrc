@@ -4,12 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Snipmate and its numerous dependencies
-"Bundle 'honza/snipmate-snippets'
-"Bundle 'tomtom/tlib_vim'
-"Bundle 'MarcWeber/vim-addon-mw-utils'
-"Bundle 'garbas/vim-snipmate'
-
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
@@ -25,19 +19,19 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'SirVer/ultisnips'
 
-" Snipmate
-let g:snips_trigger_key='<c-space>'
-let g:snips_trigger_key_backwards='<s-c-space>'
-
 " YouCompleteMe
 let g:ycm_key_list_select_completion=['<Tab>']
 let g:ycm_key_list_previous_completion=['<S-Tab>']
+let g:ycm_key_invoke_completion=''
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = '<c-CR>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsListSnippets = '<c-l>'
+let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
+" Don't forget to symlink ~/.vim/my_snips into configs!
+"ino <expr> <CR> firs_func() ? abc() : cde()
 
 
 filetype plugin indent on
