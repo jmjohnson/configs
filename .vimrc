@@ -110,7 +110,14 @@ noremap q <Nop>
 " Delete trailing whitespace
 " removes trailing spaces of python files
 " (and restores cursor position)
-autocmd BufWritePre *.{py,js,proto,hs} mark z | %s/ *$//e | 'z
+fun! StripTrailingWS()
+  let l = line(".")
+  let c = col(".")
+  keepjumps %s/\s\+$//e
+  keepjumps call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :keepjumps call StripTrailingWS()
 
 " Redraw screen
 nnoremap <F5> :redr!<CR>
