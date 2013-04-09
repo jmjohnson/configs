@@ -90,9 +90,9 @@ nnoremap <C-s> :w<CR>
 inoremap <C-q> <C-o>:q<CR>
 nnoremap <C-q> :q<CR>
 vnoremap <C-c> "+y
-nnoremap <C-v> "+p 
-inoremap <C-v>  <C-o>"+p 
-vnoremap <C-x> "+x 
+nnoremap <C-v> "+p
+inoremap <C-v>  <C-o>"+p
+vnoremap <C-x> "+x
 
 " Map window jumping keys
 nnoremap <c-k> <c-w>k
