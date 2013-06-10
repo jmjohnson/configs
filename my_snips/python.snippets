@@ -2,3 +2,11 @@ snippet testfunc "Creates a single parameterless test case" !b
 def test${1:ThatThingThatNeedsTesting}(self):
   $2
 endsnippet
+
+snippet infolog "Creates a logging statement" !b
+logging.info('*' * 50 + '${1}: "%s"', ${2})
+endsnippet
+
+snippet aself "Assign property to self" !b
+self._${1:property_name} = $1
+endsnippet
