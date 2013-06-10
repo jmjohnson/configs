@@ -99,6 +99,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+set splitright
 
 " Cap Y yanks to EOL
 map Y y$
@@ -124,3 +125,4 @@ nnoremap <F5> :redr!<CR>
 
 " I only ever want to look in my buffers, usually
 let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_extensions = ['buffertag']
