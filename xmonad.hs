@@ -1,3 +1,5 @@
+{- Precise install instructions: http://www.haskell.org/haskellwiki/Xmonad/Using_xmonad_in_Gnome#Ubuntu_Precise
+ - don't forget to `sudo apt-get install suckless-tools gnome-panel` -}
 import qualified XMonad.StackSet as W
 import Data.Bits((.|.))
 

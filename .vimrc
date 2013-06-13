@@ -14,6 +14,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'duganchen/vim-soy'
+" This plugin needs compilation
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mattn/zencoding-vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
