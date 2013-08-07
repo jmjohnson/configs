@@ -19,6 +19,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'mattn/zencoding-vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'SirVer/ultisnips'
+Bundle 'tpope/vim-speeddating'
 
 " YouCompleteMe
 let g:ycm_key_list_select_completion=['<Tab>']
@@ -34,6 +35,9 @@ let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
 " Don't forget to symlink ~/.vim/my_snips into configs!
 "ino <expr> <CR> firs_func() ? abc() : cde()
 
+" Don't forget to put the python checker in
+" ~/.vim/bundle/syntastic/syntax_checkers/...
+let g:syntastic_python_checkers=['']
 
 filetype plugin indent on
 
