@@ -20,6 +20,9 @@ main = xmonad $ gnomeConfig {
     dmenuBindings :: KeyMask -> [((KeyMask, KeySym), X())]
     dmenuBindings modMask = [ ((modMask, xK_p), spawn "dmenu_run") ]
 
+    startChrome :: KeyMask -> [((KeyMask, KeySym), X())]
+    startChrome modMask = [ ((modMask, xK_c), spawn "google-chrome") ]
+
     swapWorkspaceBindings :: KeyMask -> [((KeyMask, KeySym), X())]
     swapWorkspaceBindings modMask =
       [((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
@@ -27,4 +30,4 @@ main = xmonad $ gnomeConfig {
          (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
     insKeys :: XConfig l -> [((KeyMask, KeySym), X())]
-    insKeys XConfig { modMask = modMask } = dmenuBindings modMask ++ swapWorkspaceBindings modMask
+    insKeys XConfig { modMask = modMask } = dmenuBindings modMask ++ swapWorkspaceBindings modMask ++ startChrome modMask
