@@ -11,7 +11,7 @@ import XMonad.Util.EZConfig (additionalKeysP)
 main = xmonad $ gnomeConfig {
   keys = customKeys delKeys insKeys,
   logHook = return ()  -- TODO: Log something!
-  } `additionalKeysP` (insertEmail ++ insertWorkEmail ++ insertCseTopAccountReportingMdb ++ insertDate ++ pasteGtechJeff ++ insertNextWeek)
+  } `additionalKeysP` (insertEmail ++ insertWorkEmail ++ insertCseTopAccountReportingMdb ++ insertDate ++ pasteGtechJeff)
   where
     -- Remap mod-p to dmenu and mod-[sd] to swapping xinerama screens.
     delKeys :: XConfig l -> [(KeyMask, KeySym)]
@@ -35,9 +35,6 @@ main = xmonad $ gnomeConfig {
 
     insertDate :: [(String, X ())]
     insertDate = [("M-i d", spawn "paste_it.sh $(date --rfc-3339=date)")]
-
-    insertNextWeek :: [(String, X ())]
-    insertNextWeek = [("M-i d f", spawn "paste_it.sh $(date --rfc-3339=date)")]
 
     pasteGtechJeff :: [(String, X ())]
     pasteGtechJeff = [("M-i g", spawn "paste_it.sh https://plus.google.com/hangouts/_/google.com/gtechjeff; xdotool key Return")]
