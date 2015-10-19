@@ -34,7 +34,7 @@ main = xmonad $ gnomeConfig {
     insertCseTopAccountReportingMdb = [("M-i c s e", spawn "paste_it.sh cse-top-account-reporting")]
 
     insertDate :: [(String, X ())]
-    insertDate = [("M-i d t", spawn "paste_it.sh $(date --rfc-3339=date)")]
+    insertDate = [("M-i d", spawn "paste_it.sh $(date --rfc-3339=date)")]
 
     insertNextWeek :: [(String, X ())]
     insertNextWeek = [("M-i d f", spawn "paste_it.sh $(date --rfc-3339=date)")]

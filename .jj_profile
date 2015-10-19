@@ -9,10 +9,15 @@ fullcommit(){
 }
 
 export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$(__git_ps1)\n\$"
+export PATH=$PATH:~/configs/bin
 
 
+alias pipewrench='/google/data/ro/projects/pso/pipewrench'
+alias f1-sql="/google/data/ro/projects/storage/f1/tools/f1-sql-prod"
 alias ll="ls -lah"
 alias l="ls -lh"
+alias bb="find . -name BUILD | xargs -I{} buildifier {}"
+alias g3python="/google/data/ro/projects/g3python/g3python"
 alias servehere="python -m SimpleHTTPServer 8080"
 alias xmod="xmodmap .Xmodmap"
 alias sed='sed -r'

@@ -1,3 +1,5 @@
+source /usr/share/vim/google/google.vim  " Initialize some basic settings.
+
 " Vundle and plugins
 set nocompatible
 filetype off
