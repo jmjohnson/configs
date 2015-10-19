@@ -6,7 +6,7 @@
 
 [user]
   name = Jeff Johnson
-  email = ---@gmail.com
+	email = energy.nexus@gmail.com
 
 [credential]
   helper = cache --timeout=3600
@@ -43,3 +43,6 @@
 
 [core]
   whitespace = trailing-space
+	pager = /usr/bin/less
+[push]
+	default = simple
