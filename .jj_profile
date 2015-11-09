@@ -26,3 +26,5 @@ alias cal='cal -3'
 export LESS=-SiR
 export MYGROUP=cse-top-account-reporting
 
+# Allows terminal to show output when I forward search with Ctrl-s
+stty -ixon
