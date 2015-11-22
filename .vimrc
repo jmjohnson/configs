@@ -7,21 +7,20 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-surround'
-Bundle 'Townk/vim-autoclose'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
+"Bundle 'duganchen/vim-soy'
+"Bundle 'mattn/zencoding-vim'
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Bundle 'tpope/vim-speeddating'
+"Bundle 'vim-scripts/taglist.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Townk/vim-autoclose'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'duganchen/vim-soy'
-" This plugin needs compilation
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'mattn/zencoding-vim'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'SirVer/ultisnips'
-Bundle 'tpope/vim-speeddating'
+Bundle 'Townk/vim-autoclose'
+" This plugin needs compilation
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-surround'
 
 " YouCompleteMe
 let g:ycm_key_list_select_completion=['<Tab>']
@@ -40,11 +39,15 @@ let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
 " Don't forget to put the python checker in
 " ~/.vim/bundle/syntastic/syntax_checkers/...
 let g:syntastic_python_checkers=['']
+" I think the above line is usually filled in for company specific linters...
+" I'll just set this for now.
+syntax on
 
 filetype plugin indent on
 
 " Personal settings
 set number
+set relativenumber
 set softtabstop=2
 set tabstop=2
 set shiftwidth=2
