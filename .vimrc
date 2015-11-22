@@ -1,6 +1,6 @@
 " Vundle and plugins
 set nocompatible
-filetype off
+" filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -10,20 +10,21 @@ Bundle 'gmarik/vundle'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-speeddating'
 "Bundle 'vim-scripts/taglist.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'SirVer/ultisnips'
-Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
+Bundle 'SirVer/ultisnips'
+Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-surround'
+Bundle 'honza/vim-snippets'
 
 " Google specific configs and their mutually exclusive counterparts.
 if filereadable(expand("~/.at_google.vim"))
   source ~/.at_google.vim  " Initialize some basic settings.
 else
   " This plugin needs compilation
-   Bundle 'Valloric/YouCompleteMe'
+  Bundle 'Valloric/YouCompleteMe'
 endif
 
 " YouCompleteMe
@@ -32,10 +33,9 @@ let g:ycm_key_list_previous_completion=['<S-Tab>']
 let g:ycm_key_invoke_completion=''
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger = '<c-CR>'
-let g:UltiSnipsJumpForwardTrigger = '<c-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
-let g:UltiSnipsListSnippets = '<c-l>'
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
 " Don't forget to symlink ~/.vim/my_snips into configs!
 "ino <expr> <CR> firs_func() ? abc() : cde()
@@ -140,3 +140,4 @@ nnoremap <F5> :redr!<CR>
 " I only ever want to look in my buffers, usually
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_extensions = ['buffertag']
+
