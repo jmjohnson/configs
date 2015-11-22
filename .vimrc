@@ -1,5 +1,3 @@
-source /usr/share/vim/google/google.vim  " Initialize some basic settings.
-
 " Vundle and plugins
 set nocompatible
 filetype off
@@ -15,12 +13,18 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'SirVer/ultisnips'
 Bundle 'Townk/vim-autoclose'
-" This plugin needs compilation
-"Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
+
+" Google specific configs and their mutually exclusive counterparts.
+if filereadable(expand("~/.at_google.vim"))
+  source ~/.at_google.vim  " Initialize some basic settings.
+else
+  " This plugin needs compilation
+   Bundle 'Valloric/YouCompleteMe'
+endif
 
 " YouCompleteMe
 let g:ycm_key_list_select_completion=['<Tab>']
