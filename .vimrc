@@ -15,6 +15,8 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'SirVer/ultisnips'
+" Autoclose remaps the spacekey. Search for AutoCloseExpandSpace in the source
+" and add a <C-]> to it to make sure it still expands stuff
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-surround'
 Bundle 'honza/vim-snippets'
