@@ -38,15 +38,23 @@ let g:ycm_key_invoke_completion=''
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+let g:UltiSnipsListSnippets = "<c-l>"
 let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
 " Don't forget to symlink ~/.vim/my_snips into configs!
 "ino <expr> <CR> firs_func() ? abc() : cde()
 
 " Don't forget to put the python checker in
 " ~/.vim/bundle/syntastic/syntax_checkers/...
-let g:syntastic_python_checkers=['']
 " I think the above line is usually filled in for company specific linters...
 " I'll just set this for now.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 syntax on
 
 filetype plugin indent on
