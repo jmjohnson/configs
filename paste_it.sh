@@ -2,5 +2,5 @@
 
 SAVED_CLIP="`xclip -selection c -o`"
 printf "$@" | xclip -selection c -in # Reads from stdin
-xdotool key ctrl+shift+v
+xdotool key shift+Insert
 printf "$SAVED_CLIP" | xclip -selection c -in
