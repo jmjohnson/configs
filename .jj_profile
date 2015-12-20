@@ -16,6 +16,7 @@ alias pipewrench='/google/data/ro/projects/pso/pipewrench'
 alias f1-sql="/google/data/ro/projects/storage/f1/tools/f1-sql-prod"
 alias ll="ls -lah"
 alias l="ls -lh"
+alias llt="ll -t"
 alias bb="find . -name BUILD | xargs -I{} buildifier {}"
 alias g3python="/google/data/ro/projects/g3python/g3python"
 alias servehere="python -m SimpleHTTPServer 8080"
