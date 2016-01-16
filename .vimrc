@@ -1,40 +1,47 @@
+" Plugins {{{
 " Vundle and plugins
 set nocompatible
-" filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-"Bundle 'duganchen/vim-soy'
-"Bundle 'mattn/zencoding-vim'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Bundle 'tpope/vim-speeddating'
-"Bundle 'vim-scripts/taglist.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'SirVer/ultisnips'
+Plugin 'VundleVim/Vundle.vim'
+"Plugin 'duganchen/vim-soy'
+"Plugin 'mattn/zencoding-vim'
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'tpope/vim-speeddating'
+"Plugin 'vim-scripts/taglist.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'SirVer/ultisnips'
 " Autoclose remaps the spacekey. Search for AutoCloseExpandSpace in the source
 " and add a <C-]> to it to make sure it still expands stuff
-Bundle 'Townk/vim-autoclose'
-Bundle 'tpope/vim-surround'
-Bundle 'honza/vim-snippets'
+Plugin 'Townk/vim-autoclose'
+Plugin 'tpope/vim-surround'
+Plugin 'honza/vim-snippets'
+Plugin 'scrooloose/nerdtree'
 
 " Google specific configs and their mutually exclusive counterparts.
-if filereadable(expand("~/.at_google.vim"))
-  source ~/.at_google.vim  " Initialize some basic settings.
-else
-  " This plugin needs compilation
-  Bundle 'Valloric/YouCompleteMe'
-endif
+"if filereadable(expand("~/.at_google.vim"))
+  "source ~/.at_google.vim  " Initialize some basic settings.
+"else
+  "" This plugin needs compilation
+  "Plugin 'Valloric/YouCompleteMe'
+"endif
 
-" YouCompleteMe
+call vundle#end()
+filetype plugin indent on
+" }}}
+
+" YouCompleteMe {{{
 let g:ycm_key_list_select_completion=['<Tab>']
 let g:ycm_key_list_previous_completion=['<S-Tab>']
 let g:ycm_key_invoke_completion=''
+" }}}
 
-" Ultisnips
+" Ultisnips {{{
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
@@ -42,7 +49,9 @@ let g:UltiSnipsListSnippets = "<c-l>"
 let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
 " Don't forget to symlink ~/.vim/my_snips into configs!
 "ino <expr> <CR> firs_func() ? abc() : cde()
+" }}}
 
+" Syntastic {{{
 " Don't forget to put the python checker in
 " ~/.vim/bundle/syntastic/syntax_checkers/...
 " I think the above line is usually filled in for company specific linters...
@@ -56,10 +65,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 syntax on
+" }}}
 
-filetype plugin indent on
+" Ctrl-P {{{
+let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_extensions = ['buffertag']
+" }}}
 
-" Personal settings
+" Personal settings {{{
 set number
 set relativenumber
 set softtabstop=2
@@ -80,7 +93,6 @@ set autoread
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
 set autochdir " IMPORTANT: Causes some plugins not to work
-
 let mapleader = ","
 " set guifont=Liberation\ Mono\ 10
 
@@ -142,12 +154,22 @@ fun! StripTrailingWS()
   keepjumps call cursor(l, c)
 endfun
 
-autocmd BufWritePre * :keepjumps call StripTrailingWS()
+augroup stripws
+  autocmd!
+  autocmd BufWritePre * :keepjumps call StripTrailingWS()
+augroup end
 
 " Redraw screen
 nnoremap <F5> :redr!<CR>
+" }}}
 
-" I only ever want to look in my buffers, usually
-let g:ctrlp_cmd = 'CtrlPBuffer'
-let g:ctrlp_extensions = ['buffertag']
+filetype plugin indent on
+
+" Vimscript file settings --------------------- {{{
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
 
