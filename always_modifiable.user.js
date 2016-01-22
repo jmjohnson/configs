@@ -1,13 +1,12 @@
 // ==UserScript==
-// @name          Always allow events modifiable
-// @description   Always makes google calendar events modifiable.
-// @match       https://www.google.com/calendar/*
+// @match https://calendar.google.com/calendar/render*
 // ==/UserScript==
 
-window.setInterval(function(){
-  var elem = document.querySelector('.ep-go-guests-can input');
-  if (elem &&
-      elem.id.match(/:.*guests-modify/))
-	  elem.checked = true;
-	
-}, 500);
+var intervalId = window.setInterval(function(){
+  var guestsModify = document.evaluate('//*[contains(@id,"guests-modify")]', document).iterateNext();
+  
+  if (guestsModify) {
+    guestsModify.checked = true;
+    window.clearInterval(intervalId);
+  }
+}, 100);
