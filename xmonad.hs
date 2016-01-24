@@ -24,6 +24,7 @@ main = xmonad $ gnomeConfig {
     startChrome :: KeyMask -> [((KeyMask, KeySym), X())]
     startChrome modMask = [ ((modMask, xK_c), spawn "google-chrome") ]
 
+    -- There may be something special about the process when spawned from xmonad here rather than from dmenu_run...
     insertEmail :: [(String, X ())]
     insertEmail = [("M-i 2", spawn "paste_it.sh energy.nexus@gmail.com")]
 
