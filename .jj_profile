@@ -27,5 +27,7 @@ alias cal='cal -3'
 export LESS=-SiR
 export MYGROUP=cse-top-account-reporting
 
+# useful wget command: wget -E -H -k -K -p http://site/document
+
 # Allows terminal to show output when I forward search with Ctrl-s
 stty -ixon
