@@ -23,14 +23,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 
-" Google specific configs and their mutually exclusive counterparts.
-"if filereadable(expand("~/.at_google.vim"))
-  "source ~/.at_google.vim  " Initialize some basic settings.
-"else
-  "" This plugin needs compilation
-  "Plugin 'Valloric/YouCompleteMe'
-"endif
-
 call vundle#end()
 filetype plugin indent on
 " }}}
@@ -54,7 +46,6 @@ let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
 " Syntastic {{{
 " Don't forget to put the python checker in
 " ~/.vim/bundle/syntastic/syntax_checkers/...
-" I think the above line is usually filled in for company specific linters...
 " I'll just set this for now.
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
