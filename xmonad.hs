@@ -28,17 +28,8 @@ main = xmonad $ gnomeConfig {
     insertEmail :: [(String, X ())]
     insertEmail = [("M-i 2", spawn "paste_it.sh energy.nexus@gmail.com")]
 
-    insertWorkEmail :: [(String, X ())]
-    insertWorkEmail = [("M-i j", spawn "paste_it.sh jeffreyjohnson@google.com ")]
-
-    insertCseTopAccountReportingMdb :: [(String, X ())]
-    insertCseTopAccountReportingMdb = [("M-i c s e", spawn "paste_it.sh cse-top-account-reporting")]
-
     insertDate :: [(String, X ())]
     insertDate = [("M-i d", spawn "paste_it.sh $(date --rfc-3339=date)")]
-
-    pasteGtechJeff :: [(String, X ())]
-    pasteGtechJeff = [("M-i g", spawn "paste_it.sh https://plus.google.com/hangouts/_/google.com/gtechjeff; xdotool key Return")]
 
     -- TODO: generate substitutions from a file.
 
