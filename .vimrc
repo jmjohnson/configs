@@ -39,6 +39,8 @@ let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:UltiSnipsListSnippets = "<c-l>"
 let g:UltiSnipsSnippetDirectories = ['my_snips', 'UltiSnips']
+let g:UltiSnipsEditSplit="vertical"
+nnoremap <Leader>u :UltiSnipsEdit
 " Don't forget to symlink ~/.vim/my_snips into configs!
 "ino <expr> <CR> firs_func() ? abc() : cde()
 " }}}

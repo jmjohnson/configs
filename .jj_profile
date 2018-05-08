@@ -22,6 +22,7 @@ alias gitk="gitk & disown"
 alias refreshtags="ctags -R --languages=ruby"
 
 export LESS=-SiR
+export EDITOR=vim
 
 # useful wget command: wget -E -H -k -K -p http://site/document
 
