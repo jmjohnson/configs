@@ -17,8 +17,9 @@ alias l="ls -lh"
 alias llt="ll -t"
 alias servehere="python -m SimpleHTTPServer 8080"
 alias xmod="xmodmap .Xmodmap"
-alias sed='sed -r'
-alias cal='cal -3'
+
+alias gitk="gitk & disown"
+alias refreshtags="ctags -R --languages=ruby"
 
 export LESS=-SiR
 
