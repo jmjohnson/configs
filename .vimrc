@@ -6,26 +6,30 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'duganchen/vim-soy'
-"Plugin 'mattn/zencoding-vim'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Plugin 'tpope/vim-speeddating'
-"Plugin 'vim-scripts/taglist.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'SirVer/ultisnips'
 " Autoclose remaps the spacekey. Search for AutoCloseExpandSpace in the source
 " and add a <C-]> to it to make sure it still expands stuff
 Plugin 'Townk/vim-autoclose'
+Plugin 'tmhedberg/matchit'
+Plugin 'ruby-matchit'
 Plugin 'tpope/vim-surround'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'calleerlandsson/pick.vim'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 filetype plugin indent on
 " }}}
+
+let mapleader=","
 
 " YouCompleteMe {{{
 let g:ycm_key_list_select_completion=['<Tab>']
@@ -45,6 +49,10 @@ nnoremap <Leader>u :UltiSnipsEdit
 "ino <expr> <CR> firs_func() ? abc() : cde()
 " }}}
 
+" NERD Tree {{{
+nnoremap <leader>nf :NERDTreeFind<CR>
+" }}}
+
 " Syntastic {{{
 " Don't forget to put the python checker in
 " ~/.vim/bundle/syntastic/syntax_checkers/...
@@ -57,6 +65,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+nnoremap <leader>sc :SyntasticReset<CR>
 syntax on
 " }}}
 
@@ -65,9 +75,13 @@ let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_extensions = ['buffertag']
 " }}}
 
+" Pickfile {{{
+let g:pick_executable = "pick -K"
+nnoremap <Leader>p :call PickFile()<CR>
+" }}}
+
 " Personal settings {{{
 set number
-set relativenumber
 set softtabstop=2
 set tabstop=2
 set shiftwidth=2
@@ -85,9 +99,10 @@ set showmatch
 set autoread
 set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
-set autochdir " IMPORTANT: Causes some plugins not to work
-let mapleader = ","
+" set autochdir " IMPORTANT: Causes some plugins not to work
 " set guifont=Liberation\ Mono\ 10
+
+nnoremap <leader>cl :let @+=expand("%") . ":" . line(".")<CR>
 
 nnoremap / /\v
 nnoremap <silent> <Space> :nohl<CR><Space>
