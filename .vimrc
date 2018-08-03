@@ -24,6 +24,10 @@ Plugin 'calleerlandsson/pick.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'vim-scripts/dbext.vim' " Remaps <C-c> in insert mode; adds a bunch
+" of follow up keys which delays using <C-c> to exit command mode
 
 call vundle#end()
 filetype plugin indent on
@@ -66,7 +70,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-nnoremap <leader>sc :SyntasticReset<CR>
+nnoremap <Leader>sc :SyntasticReset<CR>
 syntax on
 " }}}
 
@@ -78,6 +82,10 @@ let g:ctrlp_extensions = ['buffertag']
 " Pickfile {{{
 let g:pick_executable = "pick -K"
 nnoremap <Leader>p :call PickFile()<CR>
+" }}}
+
+" Fugitive {{{
+nnoremap <Leader>gb :Gblame<CR>
 " }}}
 
 " Personal settings {{{
@@ -106,6 +114,9 @@ nnoremap <leader>cl :let @+=expand("%") . ":" . line(".")<CR>
 
 nnoremap / /\v
 nnoremap <silent> <Space> :nohl<CR><Space>
+
+" Change the default SQL plugin's omni-complete keys
+let g:ftplugin_sql_omni_key = '<C-j>'
 
 " Quick reloading of files
 autocmd BufEnter,BufWinEnter,CursorHold filename :checktime
